@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2f5d3b">
+<title>Hostal Wilma | Toro Toro</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--g:#4f8058;--gd:#2f5d3b;--gs:#edf5ee;--br:#86502f;--au:#c49a42;--cr:#f8f5ef;--ink:#263128;--mu:#69736b;--ln:#e4e8e3;--rd:#b64a42}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fbfcfa}
+button,input,select,textarea{font:inherit}img{max-width:100%}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.c{width:min(1160px,92%);margin:auto}
+.top{background:var(--gd);color:#fff;font-size:12px;padding:8px 0}.top .c{display:flex;justify-content:space-between;gap:10px}
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:10px}.brand img{width:50px;height:50px;object-fit:contain;border-radius:12px}
+.brand strong{font-family:"Playfair Display",serif;font-size:20px;display:block;line-height:1}.brand small{color:var(--mu);font-size:10px}
+.links{display:flex;gap:20px;font-size:13px;font-weight:700;color:#536056}.links a:hover{color:var(--g)}
+.act{display:flex;gap:8px;align-items:center}
+.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:800;font-size:13px;transition:.2s;display:inline-block}
+.bp{background:var(--g);color:#fff}.bp:hover{background:var(--gd)}.bl{background:#fff;border:1px solid var(--ln);color:var(--ink)}.bd{background:var(--ink);color:#fff}.br2{background:#fff0ee;color:var(--rd);border:1px solid #f1c9c4}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.cur{display:flex;border:1px solid var(--ln);border-radius:12px;overflow:hidden}.cur button{border:0;background:#fff;padding:10px 11px;font-weight:800;font-size:12px}.cur .on{background:var(--ink);color:#fff}
+.bdg{background:var(--br);color:#fff;border-radius:50%;width:20px;height:20px;font-size:10px;display:inline-grid;place-items:center;margin-left:6px}
+.hero{min-height:600px;position:relative;display:grid;align-items:center;color:#fff;overflow:hidden}
+.hbg{position:absolute;inset:0;background:center/cover}.hov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,42,28,.86),rgba(23,42,28,.5) 55%,rgba(23,42,28,.25))}
+.hc{position:relative;padding:80px 0;max-width:760px}
+.eb{display:inline-block;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);padding:7px 13px;border-radius:99px;font-size:11px;font-weight:800}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(38px,6vw,66px);line-height:1.04;margin:18px 0}
+.hero p{font-size:17px;line-height:1.7;max-width:640px;margin:0 0 26px;color:#eef3ee}
+.sb{margin-top:36px;background:rgba(255,255,255,.96);color:var(--ink);padding:14px;border-radius:20px;display:grid;grid-template-columns:1fr 1fr auto;gap:10px;max-width:700px}
+.f{display:flex;flex-direction:column;gap:5px}.f label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:800;color:var(--mu)}
+.f input,.f select,.f textarea{width:100%;border:1px solid var(--ln);border-radius:11px;padding:10px 11px;outline:none;background:#fff}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(79,128,88,.12)}
+section{padding:70px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+.k{color:var(--g);font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:900}
+.sh h2,.h2{font-family:"Playfair Display",serif;font-size:34px;margin:6px 0 0}.sh p{color:var(--mu);max-width:520px;line-height:1.6;margin:0}
+.fl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:22px}.fl .sp{flex:1;min-width:200px;max-width:300px;margin-left:auto}
+.chip{border:1px solid var(--ln);background:#fff;border-radius:11px;padding:9px 13px;font-size:12px;font-weight:800;color:#536056}.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--ln);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 26px rgba(36,50,40,.06)}
+.ci{height:190px;background:#e9eee9 center/cover;position:relative}
+.ct{position:absolute;left:12px;top:12px;background:rgba(38,49,40,.88);color:#e8c46c;font-size:10px;font-weight:900;text-transform:uppercase;padding:5px 9px;border-radius:8px}
+.cs{position:absolute;left:12px;bottom:12px;background:var(--g);color:#fff;font-size:10px;font-weight:900;padding:4px 8px;border-radius:7px}
+.cb{padding:17px;display:flex;flex-direction:column;flex:1;gap:10px}.cb h3{font-family:"Playfair Display",serif;font-size:20px;margin:0}
+.mu{color:var(--mu)}.sm{font-size:12px;line-height:1.55}
+.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{background:var(--gs);color:var(--gd);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:800}
+.cbt{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid var(--ln)}
+.pr{font-weight:900;font-size:18px}
+.sv{background:var(--cr)}.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:15px}
+.s{background:#fff;border:1px solid #ece9e2;border-radius:18px;padding:20px}.si{width:42px;height:42px;border-radius:12px;background:var(--gs);display:grid;place-items:center;color:var(--g);margin-bottom:11px}
+.s h3{font-size:14px;margin:0 0 5px}.s p{font-size:12px;color:var(--mu);margin:0;line-height:1.5}
+.ex{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.exi{min-height:400px;border-radius:26px;background:center/cover}
+.ck{display:grid;gap:12px;margin:22px 0}.ck div{display:flex;gap:10px}.ck i{color:var(--g);margin-top:3px}.ck span{display:block;color:var(--mu);font-size:12px;margin-top:2px}
+.st{background:var(--gd);color:#fff}.stg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.step{padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(255,255,255,.05)}
+.sn{width:34px;height:34px;border-radius:50%;background:var(--au);display:grid;place-items:center;font-weight:900;margin-bottom:12px}.step h3{font-size:14px;margin:0 0 6px}.step p{font-size:12px;line-height:1.6;color:#cbd8cd;margin:0}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.map{min-height:300px;border-radius:24px;background:linear-gradient(135deg,#dfeade,#f6f1e7);display:grid;place-items:center;text-align:center;padding:28px;border:1px solid var(--ln)}.map i{font-size:46px;color:var(--g);margin-bottom:10px}
+.cc{background:#fff;border:1px solid var(--ln);border-radius:24px;padding:28px;box-shadow:0 14px 40px rgba(36,50,40,.09)}
+.cr{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--ln)}.cr i{color:var(--g);width:20px;margin-top:3px}.cr span{display:block;color:var(--mu);font-size:12px;margin-top:2px}
+footer{background:#202c23;color:#d9e1da;padding:44px 0 22px}.fg{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.fg img{width:48px;height:48px;border-radius:11px;background:#fff;object-fit:contain}.fb{border-top:1px solid rgba(255,255,255,.1);margin-top:26px;padding-top:16px;font-size:11px;color:#87958a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ov{position:fixed;inset:0;background:rgba(17,24,19,.55);z-index:50;display:none}.ov.show{display:block}
+.dr{position:fixed;right:0;top:0;height:100%;width:min(450px,94vw);background:#fff;z-index:60;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}.dr.show{transform:none}
+.dh{padding:18px 20px;border-bottom:1px solid var(--ln);display:flex;justify-content:space-between;align-items:center}.dh h3{margin:0;font-family:"Playfair Display",serif;font-size:23px}
+.db{padding:18px 20px;overflow:auto;flex:1}.df{padding:18px 20px;border-top:1px solid var(--ln)}
+.ci2{display:grid;grid-template-columns:62px 1fr auto;gap:11px;padding:12px 0;border-bottom:1px solid var(--ln)}.ci2 .t{width:62px;height:54px;border-radius:10px;background:center/cover}.ci2 h4{margin:0 0 3px;font-size:13px}
+.q{display:flex;align-items:center;gap:8px;margin-top:6px}.q button{width:24px;height:24px;border-radius:7px;border:1px solid var(--ln);background:#fff}
+.tot{display:flex;justify-content:space-between;font-weight:900;font-size:17px;margin-bottom:12px}
+.md{position:fixed;inset:0;z-index:70;display:none;place-items:center;padding:16px}.md.show{display:grid}
+.mc{background:#fff;width:min(820px,100%);max-height:92vh;overflow:auto;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.mh{padding:18px 22px;border-bottom:1px solid var(--ln);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:2}.mh h3{margin:0;font-family:"Playfair Display",serif;font-size:24px}
+.mb{padding:22px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pay{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.pc{border:2px solid var(--ln);border-radius:16px;padding:14px;cursor:pointer}.pc.on{border-color:var(--g);background:var(--gs)}
+.qr{width:150px;height:150px;object-fit:contain;display:block;margin:8px auto;background:#fff;border-radius:8px}.eq{height:110px;display:grid;place-items:center;background:#f4f6f3;border-radius:8px;color:#879187;font-size:11px;text-align:center;padding:12px;margin:8px 0}
+.nt{background:#fff7df;border:1px solid #f0dfaa;color:#765b1c;border-radius:12px;padding:11px;font-size:12px;line-height:1.5;margin-bottom:14px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.tab{border:1px solid var(--ln);background:#fff;border-radius:10px;padding:9px 12px;font-size:12px;font-weight:800}.tab.on{background:var(--g);color:#fff;border-color:var(--g)}
+.ar{border:1px solid var(--ln);border-radius:16px;padding:14px;margin-bottom:12px;background:#fcfdfc}.ar .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:800;font-size:13px}
+.ar .ig{display:flex;gap:6px}.ar .ig input[type=text]{flex:1}.fu{font-size:11px}
+.ck2{display:flex;gap:16px;align-items:center;font-size:12px;font-weight:700;margin-top:10px;flex-wrap:wrap}.ck2 label{display:flex;gap:6px;align-items:center}
+.acts{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.toast{position:fixed;right:16px;bottom:16px;z-index:100;background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;transform:translateY(120px);opacity:0;transition:.25s;font-size:12px;font-weight:700;max-width:90vw}.toast.show{transform:none;opacity:1}
+.vch{font-size:13px;line-height:1.8}.vch hr{border:0;border-top:1px dashed var(--ln)}
+.card{transition:.25s}.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(36,50,40,.14)}
+.burger{display:none;width:44px;height:44px;padding:0;font-size:18px}
+.mm{position:fixed;left:0;right:0;top:0;background:#fff;z-index:45;padding:84px 5% 18px;border-bottom:1px solid var(--ln);box-shadow:0 20px 40px rgba(0,0,0,.12);transform:translateY(-110%);transition:.3s;display:none}
+.mm.show{transform:none}.mm a{display:block;padding:14px 4px;font-weight:800;border-bottom:1px solid var(--ln)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--ln);padding:10px 4% calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -10px 30px rgba(0,0,0,.08)}
+.bar b{font-size:17px}.bar small{display:block;color:var(--mu);font-size:11px}
+.wa{position:fixed;right:16px;bottom:18px;z-index:35;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:none;place-items:center;font-size:28px;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+@media(max-width:900px){
+ .links{display:none}.burger{display:inline-block}.mm{display:block}
+ .ex,.loc{grid-template-columns:1fr}.exi{min-height:260px}.sb{grid-template-columns:1fr 1fr}.sb .btn{grid-column:1/-1}
+ .g3{grid-template-columns:1fr 1fr}.hero{min-height:560px}.hc{padding:60px 0}
+ .bar.has{display:flex}.bar.has~.wa{bottom:86px}body.hasbar{padding-bottom:78px}.toast{bottom:90px}
+}
+@media(max-width:600px){
+ section{padding:46px 0}.sh h2,.h2{font-size:26px}.hero h1{font-size:34px}.hero p{font-size:15px}
+ .top{display:none}.nav{height:64px;gap:8px}.brand img{width:42px;height:42px}.brand strong{font-size:17px}.brand small{display:none}
+ .act{gap:6px}.act .t{display:none}.act .btn{padding:0;width:44px;height:44px;display:grid;place-items:center}
+ .cur button{padding:12px 10px}.sb{grid-template-columns:1fr;padding:12px}
+ .g2,.g3{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.ci{height:200px}
+ .fl{flex-wrap:nowrap;overflow-x:auto;margin:0 -4% 18px;padding:2px 4% 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.fl::-webkit-scrollbar{display:none}
+ .chip{white-space:nowrap;flex:none;padding:11px 14px}.fl .sp{min-width:200px;max-width:none;margin-left:0;flex:none}
+ input,select,textarea{font-size:16px!important}.btn{min-height:44px}
+ .dr{width:100%}.md{padding:0;align-items:stretch}.mc,.mc[style]{width:100%!important;max-height:100dvh;height:100dvh;border-radius:0}.mb{padding:16px}
+ .tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px 14px;padding:0 16px 6px;scrollbar-width:none}.tab{white-space:nowrap;flex:none;padding:11px 13px}
+ .acts{position:sticky;bottom:0;background:#fff;padding:12px 0;margin-top:12px}.acts .btn{flex:1}
+ .fb,.fg{flex-direction:column;text-align:center;align-items:center}.cc{padding:20px}.map{min-height:220px}
+}
+@media print{body>*:not(#voucherModal){display:none!important}#voucherModal{position:static;display:block!important}.mh button,.acts{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><div class="c"><span><i class="fa-solid fa-location-dot"></i> <span id="tAddr"></span></span><span>Reserva directa y atención por WhatsApp</span></div></div>
+<header><div class="c nav">
+  <a class="brand" href="#inicio"><img id="logo" alt="Logo"><div><strong id="bName"></strong><small id="bSub"></small></div></a>
+  <nav class="links"><a href="#catalogo">Reservar</a><a href="#servicios">Servicios</a><a href="#experiencias">Experiencias</a><a href="#contacto">Contacto</a></nav>
+  <div class="act">
+    <div class="cur"><button id="cBs" onclick="setCur('Bs')">Bs</button><button id="cUsd" onclick="setCur('USD')">USD</button></div>
+    <button class="btn bl burger" onclick="toggleMenu()" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
+    <button class="btn bl" onclick="openAdmin()" title="Editar página" aria-label="Editar"><i class="fa-solid fa-pen-to-square"></i> <span class="t">Editar</span></button>
+    <button class="btn bp" onclick="openCart()"><i class="fa-solid fa-bag-shopping"></i> <span class="t">Mi reserva</span><b class="bdg" id="cnt">0</b></button>
+  </div>
+</div></header>
+
+<nav class="mm" id="mm" onclick="toggleMenu()"><a href="#catalogo">Reservar</a><a href="#servicios">Servicios</a><a href="#experiencias">Experiencias</a><a href="#ubicacion">Ubicación</a><a href="#contacto">Contacto</a></nav>
+<section id="inicio" class="hero" style="padding:0">
+  <div class="hbg" id="heroBg"></div><div class="hov"></div>
+  <div class="c hc">
+    <span class="eb"><i class="fa-solid fa-mountain-sun"></i> Toro Toro, Potosí</span>
+    <h1 id="hTitle"></h1><p id="hText"></p>
+    <a href="#catalogo" class="btn bp">Ver habitaciones y tours</a>
+    <div class="sb">
+      <div class="f"><label>Ingreso</label><input type="date" id="ci" onchange="dates()"></div>
+      <div class="f"><label>Salida</label><input type="date" id="co" onchange="dates()"></div>
+      <button class="btn bd" onclick="document.getElementById('catalogo').scrollIntoView()">Buscar</button>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo"><div class="c">
+  <div class="sh"><div><span class="k">Reserva directa</span><h2>Alojamiento, camping y experiencias</h2></div><p>Elige lo que necesitas, agrégalo a tu reserva y envíala por WhatsApp.</p></div>
+  <div class="fl" id="filters"></div>
+  <div class="grid" id="prodGrid"></div>
+</div></section>
+
+<section id="servicios" class="sv"><div class="c">
+  <div class="sh"><div><span class="k">Servicios</span><h2>Lo que encontrarás en el hostal</h2></div></div>
+  <div class="sg" id="svGrid"></div>
+</div></section>
+
+<section id="experiencias"><div class="c ex">
+  <div class="exi" id="exImg"></div>
+  <div><span class="k">Experiencias</span><h2 class="h2">Descanso, naturaleza y recreación</h2>
+    <p class="mu" style="line-height:1.7">Jardines, fogata, camping y jacuzzi para vivir Toro Toro con comodidad.</p>
+    <div class="ck">
+      <div><i class="fa-solid fa-check"></i><p style="margin:0"><strong>Jacuzzi</strong><span>Reserva por hora, consulta el precio vigente.</span></p></div>
+      <div><i class="fa-solid fa-check"></i><p style="margin:0"><strong>Camping y fogata</strong><span>Áreas al aire libre para disfrutar el entorno.</span></p></div>
+      <div><i class="fa-solid fa-check"></i><p style="margin:0"><strong>Jardines y paisajes</strong><span>Espacios de descanso con vista a las montañas.</span></p></div>
+    </div>
+    <a href="#catalogo" class="btn bp">Reservar ahora</a></div>
+</div></section>
+
+<section class="st"><div class="c">
+  <div class="sh"><div><span class="k" style="color:#d9b86a">Reserva directa</span><h2 style="color:#fff">Así funciona</h2></div></div>
+  <div class="stg">
+    <div class="step"><div class="sn">1</div><h3>Elige</h3><p>Selecciona habitaciones, camping o tours.</p></div>
+    <div class="step"><div class="sn">2</div><h3>Indica tus fechas</h3><p>Ingreso, salida y huéspedes.</p></div>
+    <div class="step"><div class="sn">3</div><h3>Paga con QR o transferencia</h3><p>Usa los datos que muestra el hostal.</p></div>
+    <div class="step"><div class="sn">4</div><h3>Envía tu solicitud</h3><p>Se prepara el mensaje y se abre WhatsApp.</p></div>
+  </div>
+</div></section>
+
+<section id="ubicacion"><div class="c loc">
+  <div class="map"><div><i class="fa-solid fa-map-location-dot"></i><h3 id="mName"></h3><p class="mu sm" id="mAddr"></p><a id="mapLink" class="btn bp" target="_blank" rel="noopener">Abrir ubicación</a></div></div>
+  <div class="cc" id="contacto"><span class="k">Contacto</span><h2 class="h2" style="font-size:30px;margin-bottom:10px">¿Tienes alguna consulta?</h2>
+    <div class="cr"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span id="kPhone"></span></div></div>
+    <div class="cr"><i class="fa-solid fa-envelope"></i><div><strong>Correo</strong><span id="kMail"></span></div></div>
+    <div class="cr"><i class="fa-brands fa-facebook"></i><div><strong>Facebook</strong><span id="kFb"></span></div></div>
+    <a id="waLink" class="btn bp" style="margin-top:16px" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="c fg">
+  <div style="display:flex;gap:11px;align-items:center"><img id="fLogo" alt=""><div><strong style="font-family:'Playfair Display',serif;font-size:19px" id="fName"></strong><div style="font-size:11px;color:#aebcaf" id="fAddr"></div></div></div>
+  <a href="#" onclick="openAdmin();return false" style="font-size:12px;color:#aebcaf"><i class="fa-solid fa-lock"></i> Administración</a>
+</div><div class="c fb"><span>© <span id="yr"></span> Hostal Wilma</span><span>Plan de Marketing Digital — Proyecto de Grado</span></div></footer>
+
+<div class="bar" id="bar"><div><small id="barN"></small><b id="barT"></b></div><button class="btn bp" onclick="openCart()">Ver mi reserva</button></div>
+<a class="wa" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="ov" id="ov" onclick="closeAll()"></div>
+<aside class="dr" id="cart"><div class="dh"><h3>Mi reserva</h3><button class="btn bl" onclick="closeAll()">×</button></div>
+  <div class="db"><div id="cartItems"></div><p id="cartEmpty" class="mu sm" style="text-align:center;padding:40px 10px">Aún no has agregado nada.</p></div>
+  <div class="df"><div class="sm mu" id="cartNights" style="margin-bottom:8px"></div><div class="tot"><span>Total estimado</span><span id="cartTotal"></span></div><button class="btn bp" style="width:100%" onclick="openCheckout()">Continuar con la reserva</button></div>
+</aside>
+
+<div class="md" id="checkout"><div class="mc"><div class="mh"><h3>Confirmar reserva</h3><button class="btn bl" onclick="closeAll()">×</button></div><div class="mb">
+  <div class="nt" id="sum"></div>
+  <div class="g2">
+    <div class="f"><label>Nombre completo *</label><input id="gName"></div><div class="f"><label>WhatsApp *</label><input id="gPhone" placeholder="7XXXXXXX"></div>
+    <div class="f"><label>Correo (opcional)</label><input id="gMail" type="email"></div><div class="f"><label>Huéspedes</label><input id="gCount" type="number" min="1" value="1"></div>
+    <div class="f"><label>Ingreso</label><input id="gIn" type="date" onchange="syncDates('gIn','gOut')"></div><div class="f"><label>Salida</label><input id="gOut" type="date" onchange="syncDates('gIn','gOut')"></div>
+  </div>
+  <div class="f" style="margin-top:12px"><label>Observaciones</label><input id="gNote" placeholder="Opcional"></div>
+  <h4 style="margin:22px 0 4px">Método de pago</h4><div class="pay" id="payGrid"></div>
+  <div class="f" style="margin-top:12px"><label>Referencia / comprobante</label><input id="gProof" placeholder="Ej.: comprobante enviado por WhatsApp"></div>
+  <div class="acts"><button class="btn bl" onclick="closeAll();openCart()">Volver</button><button class="btn bp" onclick="sendOrder()"><i class="fa-brands fa-whatsapp"></i> Enviar solicitud</button></div>
+</div></div></div>
+
+<div class="md" id="voucherModal"><div class="mc" style="width:min(460px,100%)"><div class="mh"><h3>Solicitud registrada</h3><button class="btn bl" onclick="closeAll()">×</button></div><div class="mb"><div class="vch" id="vch"></div>
+  <div class="acts"><button class="btn bl" onclick="window.print()"><i class="fa-solid fa-print"></i> Imprimir</button><button class="btn bp" onclick="closeAll()">Entendido</button></div></div></div></div>
+
+<div class="md" id="admin"><div class="mc"><div class="mh"><h3>Panel de edición</h3><button class="btn bl" onclick="closeAll()">×</button></div><div class="mb">
+  <div class="nt"><b>Todo se edita aquí.</b> Los cambios se guardan en este navegador. Usa «Respaldo» para descargar una copia o pasarla a otro equipo.</div>
+  <div class="tabs" id="tabs"></div><div id="aBody"></div>
+</div></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const K='hostalWilmaFusion';
+const LOGO='https://i.ibb.co/0jF0x544/C27-EA5-BC-0126-441-C-BE46-E4-E0096-B1297.png';
+const U=(id,w)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w||900}&q=80`;
+const CATS=[['habitaciones','Habitaciones','fa-bed'],['camping','Camping','fa-campground'],['tours','Tours y guías','fa-compass'],['servicios','Servicios extra','fa-mug-hot']];
+const NIGHTLY=['habitaciones','camping'];
+const DEF={
+ settings:{name:'Hostal Wilma',subtitle:'Hospedaje, camping y aventuras en Toro Toro',logo:LOGO,
+  heroTitle:'Vive Toro Toro desde Hostal Wilma',heroText:'Descansa, disfruta de la naturaleza y encuentra un espacio pensado para tu visita.',
+  heroImage:U('1506744038136-46273834b3fb',1800),expImage:U('1500534623283-312aade485b7',1200),
+  phone:'',email:'',pin:'',facebook:'',address:'A pocos bloques de la plaza principal, Toro Toro, Potosí',
+  maps:'https://www.google.com/maps/search/?api=1&query=Toro%20Toro%2C%20Potos%C3%AD%2C%20Bolivia',usd:6.96},
+ products:[
+  {id:'1',name:'Habitación Individual',cat:'habitaciones',price:90,unit:'noche',capacity:'1 persona',image:U('1505693416388-ac5ce068fe85'),desc:'Opción de alojamiento para una persona.',features:['Wi-Fi','TV'],popular:false,available:true},
+  {id:'2',name:'Habitación Matrimonial',cat:'habitaciones',price:180,unit:'noche',capacity:'2 personas',image:U('1566665797739-1674de7a421a'),desc:'Habitación para dos personas. Precio de referencia según modalidad.',features:['Wi-Fi','TV','Baño privado'],popular:true,available:true},
+  {id:'3',name:'Habitación Compartida',cat:'habitaciones',price:90,unit:'noche',capacity:'Hasta 3 personas',image:U('1555854877-bab0e564b8d5'),desc:'Opción para grupos de hasta tres personas.',features:['Wi-Fi','Estadía flexible'],popular:false,available:true},
+  {id:'4',name:'Camping (carpa propia)',cat:'camping',price:25,unit:'noche/persona',capacity:'Libre',image:U('1504280390367-361c6d9f38f4'),desc:'Área de césped para armar tu carpa, con acceso a baños y zona de fogata.',features:['Fogata','Jardines'],popular:true,available:true},
+  {id:'5',name:'Alquiler de carpa (2 personas)',cat:'camping',price:70,unit:'noche',capacity:'2 personas',image:U('1478131143081-80f7f84ca84d'),desc:'Carpa armada para dos personas.',features:['Carpa armada'],popular:false,available:true},
+  {id:'6',name:'Tour Cañón y El Vergel',cat:'tours',price:120,unit:'persona/tour',capacity:'Grupal o privado',image:U('1469854523086-cc02fe5d8800'),desc:'Caminata guiada por el cañón, mirador y cascadas.',features:['Guía','5 horas'],popular:true,available:true},
+  {id:'7',name:'Expedición Cueva de Umajalanta',cat:'tours',price:140,unit:'persona/tour',capacity:'Grupal',image:U('1518709268805-4e9042af9f23'),desc:'Aventura de espeleología con casco y linterna.',features:['Equipo incluido','Guía'],popular:false,available:true},
+  {id:'8',name:'Jacuzzi',cat:'servicios',price:120,unit:'hora',capacity:'Por reserva',image:U('1540555700478-4be289fbecef'),desc:'Uso por hora, previa reserva.',features:['Relax'],popular:false,available:true},
+  {id:'9',name:'Desayuno',cat:'servicios',price:20,unit:'porción',capacity:'1 persona',image:U('1533089860892-a7c6f0a88666'),desc:'Café o té, pan, mermelada, queso y huevos.',features:['Opción vegetariana'],popular:false,available:true}],
+ services:[['fa-wifi','Wi-Fi gratuito','Conectividad para huéspedes.'],['fa-car','Estacionamiento privado','Espacio para vehículos.'],['fa-hot-tub-person','Jacuzzi','Uso por hora con reserva.'],['fa-campground','Camping','Área para disfrutar la naturaleza.'],['fa-fire','Fogata','Recreación al aire libre.'],['fa-tree','Jardines','Áreas de descanso.'],['fa-utensils','Desayuno','Según modalidad.'],['fa-person-chalkboard','Orientación','Información sobre Toro Toro.']],
+ payments:[{name:'QR principal',bank:'Configurar banco',holder:'Configurar titular',account:'Configurar cuenta',qr:''}],
+ orders:[]};
+let data=load(),cart=[],cat='todos',q='',cur='Bs',tab='general',pay=0;
+function load(){try{const s=JSON.parse(localStorage.getItem(K));if(s)return{...structuredClone(DEF),...s,settings:{...DEF.settings,...s.settings}}}catch(e){}return structuredClone(DEF)}
+function save(){try{localStorage.setItem(K,JSON.stringify(data))}catch(e){toast('Memoria llena: usa fotos más pequeñas o enlaces')}}
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const money=n=>cur==='USD'?'$ '+(n/(data.settings.usd||6.96)).toFixed(1):'Bs '+Number(n||0).toLocaleString('es-BO');
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2600)}
+function setCur(c){cur=c;$('cBs').classList.toggle('on',c==='Bs');$('cUsd').classList.toggle('on',c==='USD');render()}
+const nights=()=>{const a=$('ci').value,b=$('co').value;if(!a||!b)return 1;return Math.max(1,Math.round((new Date(b)-new Date(a))/864e5))};
+function dates(){const a=$('ci').value;if(a&&$('co').value<=a){const d=new Date(a);d.setDate(d.getDate()+1);$('co').value=d.toISOString().slice(0,10)}renderCart()}
+function syncDates(a,b){$('ci').value=$(a).value;$('co').value=$(b).value;dates();openCheckout(true)}
+function render(){
+ const s=data.settings;document.title=s.name+' | Toro Toro';
+ $('logo').src=$('fLogo').src=s.logo||LOGO;$('bName').textContent=$('fName').textContent=$('mName').textContent=s.name;$('bSub').textContent=s.subtitle;
+ $('hTitle').textContent=s.heroTitle;$('hText').textContent=s.heroText;$('heroBg').style.backgroundImage=`url("${s.heroImage}")`;$('exImg').style.backgroundImage=`url("${s.expImage}")`;
+ $('tAddr').textContent=$('mAddr').textContent=$('fAddr').textContent=s.address;
+ $('kPhone').textContent=s.phone||'Configurar en Editar';$('kMail').textContent=s.email||'Configurar en Editar';$('kFb').textContent=s.facebook||'Configurar en Editar';
+ $('mapLink').href=s.maps||'#';$('waFloat').style.display=s.phone?'grid':'none';$('waFloat').href=s.phone?`https://wa.me/${s.phone.replace(/\D/g,'')}`:'#';
+ $('waLink').href=s.phone?`https://wa.me/${s.phone.replace(/\D/g,'')}?text=${encodeURIComponent('Hola, quisiera consultar disponibilidad en '+s.name)}`:'#';
+ $('filters').innerHTML=[['todos','Todos','fa-border-all'],...CATS].map(c=>`<button class="chip ${cat===c[0]?'on':''}" onclick="cat='${c[0]}';render()"><i class="fa-solid ${c[2]}"></i> ${c[1]}</button>`).join('')+`<div class="f sp"><input placeholder="Buscar..." value="${esc(q)}" oninput="q=this.value;renderProd()"></div>`;
+ renderProd();
+ $('svGrid').innerHTML=data.services.map(x=>`<div class="s"><div class="si"><i class="fa-solid ${esc(x[0])}"></i></div><h3>${esc(x[1])}</h3><p>${esc(x[2])}</p></div>`).join('');
+ renderCart();
+}
+function renderProd(){
+ const L=data.products.filter(p=>(cat==='todos'||p.cat===cat)&&(p.name+p.desc).toLowerCase().includes(q.toLowerCase()));
+ $('prodGrid').innerHTML=L.length?L.map(p=>`<article class="card"><div class="ci" style="background-image:url('${esc(p.image)}')"><span class="ct">${esc((CATS.find(c=>c[0]===p.cat)||[0,p.cat])[1])}</span>${p.popular?'<span class="cs">★ Destacado</span>':''}</div>
+ <div class="cb"><h3>${esc(p.name)}</h3><p class="mu sm" style="margin:0">${esc(p.desc)}</p><div class="tags">${(p.features||[]).map(f=>`<span class="tag">✓ ${esc(f)}</span>`).join('')}</div>
+ <div class="cbt"><div><div class="pr">${money(p.price)}</div><div class="mu sm">/${esc(p.unit)} · ${esc(p.capacity)}</div></div>${p.available===false?'<button class="btn bl" disabled>Agotado</button>':`<button class="btn bp" onclick="add('${p.id}')">Reservar</button>`}</div></div></article>`).join(''):'<p class="mu">No hay resultados.</p>';
+}
+function add(id){const p=data.products.find(x=>x.id===id);if(!p)return;const e=cart.find(x=>x.id===id);e?e.qty++:cart.push({id,qty:1});toast(p.name+' agregado');renderCart();openCart()}
+function chg(id,d){const x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);renderCart()}
+function rm(id){cart=cart.filter(i=>i.id!==id);renderCart()}
+function lines(){return cart.map(c=>{const p=data.products.find(x=>x.id===c.id);return p?{p,qty:c.qty,sub:p.price*c.qty*(NIGHTLY.includes(p.cat)?nights():1)}:null}).filter(Boolean)}
+const total=()=>lines().reduce((a,l)=>a+l.sub,0);
+function renderCart(){
+ const L=lines();$('cnt').textContent=cart.reduce((a,c)=>a+c.qty,0);$('cartEmpty').style.display=L.length?'none':'block';
+ const n=cart.reduce((a,c)=>a+c.qty,0);$('bar').classList.toggle('has',n>0);document.body.classList.toggle('hasbar',n>0);$('barN').textContent=n+' ítem(s) · '+nights()+' noche(s)';$('barT').textContent=money(total());
+ $('cartNights').textContent=nights()+' noche(s) para habitaciones y camping';$('cartTotal').textContent=money(total());
+ $('cartItems').innerHTML=L.map(l=>`<div class="ci2"><div class="t" style="background-image:url('${esc(l.p.image)}')"></div><div><h4>${esc(l.p.name)}</h4><span class="sm mu">${money(l.p.price)} /${esc(l.p.unit)}</span><div class="q"><button onclick="chg('${l.p.id}',-1)">−</button><b>${l.qty}</b><button onclick="chg('${l.p.id}',1)">+</button></div></div><div style="text-align:right"><b>${money(l.sub)}</b><br><button style="border:0;background:none;color:var(--rd);font-size:11px" onclick="rm('${l.p.id}')">Quitar</button></div></div>`).join('');
+}
+function openCart(){$('ov').classList.add('show');$('cart').classList.add('show')}
+function toggleMenu(){$('mm').classList.toggle('show')}
+let unlocked=false;
+function closeAll(){$('mm').classList.remove('show');['cart'].forEach(i=>$(i).classList.remove('show'));['checkout','voucherModal','admin'].forEach(i=>$(i).classList.remove('show'));$('ov').classList.remove('show')}
+function openCheckout(keep){
+ if(!lines().length){toast('Primero agrega algo a tu reserva');return}
+ $('cart').classList.remove('show');$('gIn').value=$('ci').value;$('gOut').value=$('co').value;
+ $('sum').innerHTML='<b>'+lines().map(l=>l.qty+' × '+esc(l.p.name)).join(', ')+'</b><br>'+nights()+' noche(s) · Total estimado: <b>'+money(total())+'</b>';
+ if(!keep)pay=0;payGrid();$('checkout').classList.add('show');$('ov').classList.add('show');
+}
+function payGrid(){$('payGrid').innerHTML=data.payments.map((p,i)=>`<div class="pc ${pay===i?'on':''}" onclick="pay=${i};payGrid()"><strong>${esc(p.name)}</strong><div class="sm mu">${esc(p.bank)}</div>${p.qr?`<img class="qr" src="${esc(p.qr)}" alt="QR">`:'<div class="eq">QR pendiente<br>(se sube desde Editar)</div>'}<div class="sm"><b>Titular:</b> ${esc(p.holder)}<br><b>Cuenta:</b> ${esc(p.account)}</div></div>`).join('')||'<p class="mu sm">Configura los métodos de pago en Editar → QR y pagos.</p>'}
+function sendOrder(){
+ const name=$('gName').value.trim(),ph=$('gPhone').value.trim();if(!name||!ph){toast('Completa tu nombre y WhatsApp');return}
+ const s=data.settings,L=lines(),pm=data.payments[pay],T=total();
+ const o={id:'RES-'+Math.floor(1000+Math.random()*9000),date:new Date().toLocaleString('es-BO'),name,phone:ph,email:$('gMail').value,guests:$('gCount').value,checkin:$('gIn').value,checkout:$('gOut').value,nights:nights(),note:$('gNote').value,proof:$('gProof').value,method:pm?pm.name:'—',items:L.map(l=>({name:l.p.name,qty:l.qty,sub:l.sub})),total:T,status:'Pendiente'};
+ data.orders.unshift(o);save();
+ const msg=`*NUEVA RESERVA - ${s.name.toUpperCase()}*\n\n👤 ${name}\n📱 ${ph}\n📅 ${o.checkin||'—'} → ${o.checkout||'—'} (${o.nights} noche/s)\n👥 Huéspedes: ${o.guests}\n\n🛒 DETALLE:\n${o.items.map(i=>`• ${i.name} x${i.qty} = Bs ${i.sub}`).join('\n')}\n\n💰 TOTAL: Bs ${T}\n💳 Pago: ${o.method}\n🧾 Ref.: ${o.proof||'Pendiente'}${o.note?'\n📝 '+o.note:''}`;
+ if(s.phone)window.open(`https://wa.me/${s.phone.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');else toast('Reserva guardada. Configura el WhatsApp en Editar.');
+ $('vch').innerHTML=`<b>Código:</b> ${o.id}<br><b>Huésped:</b> ${esc(name)} · ${esc(ph)}<br><b>Fechas:</b> ${esc(o.checkin||'—')} → ${esc(o.checkout||'—')} (${o.nights} noche/s)<hr>${o.items.map(i=>`• ${esc(i.name)} ×${i.qty} — Bs ${i.sub}`).join('<br>')}<hr><b>Total:</b> Bs ${T} (${esc(o.method)})<br><span class="mu">Estado: pendiente de confirmación por el hostal.</span>`;
+ cart=[];renderCart();$('checkout').classList.remove('show');$('voucherModal').classList.add('show');
+}
+/* ---------- ADMIN ---------- */
+const TABS=[['general','Identidad y portada'],['products','Productos'],['services','Servicios'],['payments','QR y pagos'],['orders','Reservas'],['backup','Respaldo']];
+function openAdmin(){const pin=data.settings.pin;if(pin&&!unlocked){const v=prompt('Clave de edición:');if(v!==pin){if(v!==null)toast('Clave incorrecta');return}unlocked=true}
+ $('admin').classList.add('show');$('ov').classList.add('show');showTab(tab)}
+function showTab(t){tab=t;$('tabs').innerHTML=TABS.map(x=>`<button class="tab ${x[0]===t?'on':''}" onclick="collect();showTab('${x[0]}')">${x[1]}</button>`).join('');
+ $('aBody').innerHTML=({general:aGeneral,products:aProducts,services:aServices,payments:aPayments,orders:aOrders,backup:aBackup})[t]()}
+const fld=(a,i,f,l,v,t)=>`<div class="f"><label>${l}</label><input ${t==='number'?'type="number" step="any"':''} data-a="${a}" data-i="${i}" data-f="${f}" value="${esc(v)}"></div>`;
+const area=(a,i,f,l,v)=>`<div class="f"><label>${l}</label><textarea rows="2" data-a="${a}" data-i="${i}" data-f="${f}">${esc(v)}</textarea></div>`;
+const imgf=(a,i,f,l,v)=>`<div class="f"><label>${l}</label><div class="ig"><input type="text" data-a="${a}" data-i="${i}" data-f="${f}" value="${esc(v)}" placeholder="Pega un enlace o sube una foto"><label class="btn bl fu" style="margin:0;padding:9px 11px"><i class="fa-solid fa-upload"></i><input type="file" accept="image/*" hidden onchange="upload(this)"></label></div></div>`;
+function upload(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{const im=new Image();im.onload=()=>{const m=900,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);const t=inp.closest('.ig').querySelector('input[type=text]');t.value=c.toDataURL('image/jpeg',.8);toast('Foto cargada: pulsa Guardar')};im.src=e.target.result};r.readAsDataURL(f)}
+function collect(){document.querySelectorAll('#aBody [data-a]').forEach(el=>{const a=el.dataset.a,f=el.dataset.f,i=el.dataset.i;let v=el.type==='checkbox'?el.checked:el.value;
+ if(el.type==='number')v=Number(v)||0;if(f==='features')v=v.split(',').map(x=>x.trim()).filter(Boolean);
+ if(a==='settings')data.settings[f]=v;else if(a==='services'){data.services[i][f]=v}else data[a][i][f]=v})}
+function saveAdmin(m){collect();save();render();toast(m||'Cambios guardados')}
+function aGeneral(){const s=data.settings,g=(f,l,t)=>fld('settings','',f,l,s[f],t);
+ return `<div class="g2">${g('name','Nombre del hostal')}${g('subtitle','Subtítulo')}${g('heroTitle','Título de portada')}${imgf('settings','','heroImage','Foto de portada',s.heroImage)}${imgf('settings','','expImage','Foto de experiencias',s.expImage)}${imgf('settings','','logo','Logo',s.logo)}${g('phone','WhatsApp (con código país, sin +)')}${g('email','Correo')}${g('facebook','Facebook')}${g('address','Dirección')}${g('maps','Enlace de Google Maps')}${g('usd','Bs por 1 USD','number')}${g('pin','Clave de edición (opcional)')}</div>${area('settings','','heroText','Texto de portada',s.heroText)}<div class="acts"><button class="btn br2" onclick="resetAll()">Restablecer todo</button><button class="btn bp" onclick="saveAdmin()">Guardar</button></div>`}
+function aProducts(){return `<div class="acts" style="margin:0 0 12px"><button class="btn bd" onclick="addRow('products')"><i class="fa-solid fa-plus"></i> Añadir producto</button></div>`+data.products.map((p,i)=>`<div class="ar"><div class="hd"><span>${esc(p.name||'Nuevo')}</span><button class="btn br2" onclick="delRow('products',${i})"><i class="fa-solid fa-trash"></i></button></div>
+ <div class="g3">${fld('products',i,'name','Nombre',p.name)}<div class="f"><label>Categoría</label><select data-a="products" data-i="${i}" data-f="cat">${CATS.map(c=>`<option value="${c[0]}" ${p.cat===c[0]?'selected':''}>${c[1]}</option>`).join('')}</select></div>${fld('products',i,'price','Precio (Bs)',p.price,'number')}${fld('products',i,'unit','Unidad (noche, persona…)',p.unit)}${fld('products',i,'capacity','Capacidad / info',p.capacity)}${fld('products',i,'features','Características (con coma)',(p.features||[]).join(', '))}</div>
+ <div class="g2" style="margin-top:12px">${imgf('products',i,'image','Foto',p.image)}${area('products',i,'desc','Descripción',p.desc)}</div>
+ <div class="ck2"><label><input type="checkbox" data-a="products" data-i="${i}" data-f="popular" ${p.popular?'checked':''}> Destacado</label><label><input type="checkbox" data-a="products" data-i="${i}" data-f="available" ${p.available!==false?'checked':''}> Disponible</label></div></div>`).join('')+`<div class="acts"><button class="btn bp" onclick="saveAdmin()">Guardar productos</button></div>`}
+function aServices(){return `<div class="acts" style="margin:0 0 12px"><button class="btn bd" onclick="addRow('services')"><i class="fa-solid fa-plus"></i> Añadir servicio</button></div>`+data.services.map((x,i)=>`<div class="ar"><div class="hd"><span>${esc(x[1])}</span><button class="btn br2" onclick="delRow('services',${i})"><i class="fa-solid fa-trash"></i></button></div><div class="g3">${fld('services',i,'0','Icono (Font Awesome, ej. fa-wifi)',x[0])}${fld('services',i,'1','Título',x[1])}${fld('services',i,'2','Descripción',x[2])}</div></div>`).join('')+`<div class="acts"><button class="btn bp" onclick="saveAdmin()">Guardar servicios</button></div>`}
+function aPayments(){return `<div class="nt">Sube la imagen del QR de tu banco y los datos de la cuenta. Se muestran al cliente en el pago.</div><div class="acts" style="margin:0 0 12px"><button class="btn bd" onclick="addRow('payments')"><i class="fa-solid fa-plus"></i> Añadir método</button></div>`+data.payments.map((p,i)=>`<div class="ar"><div class="hd"><span>${esc(p.name)}</span><button class="btn br2" onclick="delRow('payments',${i})"><i class="fa-solid fa-trash"></i></button></div><div class="g2">${fld('payments',i,'name','Nombre del método',p.name)}${fld('payments',i,'bank','Banco',p.bank)}${fld('payments',i,'holder','Titular',p.holder)}${fld('payments',i,'account','Cuenta',p.account)}</div><div style="margin-top:12px">${imgf('payments',i,'qr','Imagen del QR',p.qr)}</div>${p.qr?`<img class="qr" src="${esc(p.qr)}" style="margin:10px 0 0">`:''}</div>`).join('')+`<div class="acts"><button class="btn bp" onclick="saveAdmin()">Guardar pagos</button></div>`}
+function aOrders(){return data.orders.length?data.orders.map((o,i)=>`<div class="ar"><div class="hd"><span>${esc(o.id)} · ${esc(o.name)}</span><b>Bs ${o.total}</b></div><div class="sm mu">${esc(o.date)} · ${esc(o.phone)} · ${esc(o.checkin||'')} → ${esc(o.checkout||'')} · ${esc(o.method)}</div><p class="sm">${o.items.map(x=>x.qty+' × '+esc(x.name)).join(', ')}</p><div class="f" style="max-width:220px"><label>Estado</label><select onchange="data.orders[${i}].status=this.value;save()">${['Pendiente','Confirmada','Cancelada'].map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}</select></div></div>`).join('')+`<div class="acts"><button class="btn br2" onclick="if(confirm('¿Borrar historial?')){data.orders=[];save();showTab('orders')}">Limpiar historial</button></div>`:'<p class="mu sm">Aún no hay reservas en este navegador.</p>'}
+function aBackup(){return `<p class="sm mu">Descarga una copia con todos tus cambios (textos, fotos, precios, QR, reservas) o restáurala en otro equipo.</p><div class="acts" style="justify-content:flex-start"><button class="btn bd" onclick="exportData()"><i class="fa-solid fa-download"></i> Descargar respaldo</button><label class="btn bl" style="margin:0"><i class="fa-solid fa-upload"></i> Cargar respaldo<input type="file" accept=".json" hidden onchange="importData(this)"></label></div>`}
+function addRow(a){collect();if(a==='products')data.products.unshift({id:String(Date.now()),name:'Nuevo producto',cat:'habitaciones',price:100,unit:'noche',capacity:'2 personas',image:'',desc:'',features:[],popular:false,available:true});
+ if(a==='services')data.services.push(['fa-star','Nuevo servicio','Descripción']);if(a==='payments')data.payments.push({name:'Nuevo método',bank:'',holder:'',account:'',qr:''});showTab(a)}
+function delRow(a,i){if(!confirm('¿Eliminar este elemento?'))return;collect();data[a].splice(i,1);save();render();showTab(a)}
+function resetAll(){if(confirm('¿Restablecer todo a los valores iniciales? Se borran tus cambios.')){data=structuredClone(DEF);save();render();showTab('general');toast('Restablecido')}}
+function exportData(){const b=new Blob([JSON.stringify(data,null,1)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='hostal-wilma-respaldo.json';a.click()}
+function importData(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{data={...structuredClone(DEF),...JSON.parse(e.target.result)};save();render();showTab('general');toast('Respaldo cargado')}catch(x){toast('Archivo no válido')}};r.readAsText(f)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+/* init */
+(()=>{const d=new Date(),n=new Date();n.setDate(d.getDate()+2);$('ci').value=d.toISOString().slice(0,10);$('co').value=n.toISOString().slice(0,10);$('yr').textContent=d.getFullYear();setCur('Bs')})();
+</script>
+</body>
+</html>
